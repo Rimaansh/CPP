@@ -29,6 +29,19 @@ void displayLL()
     cout << "NULL \n";
 }
 
+void deletek(Node* head, int k, int m)
+{
+    Node* curr = head, *prev = head;
+    while(curr -> next != NULL || k-->0)
+    {
+        for(int i = 0; curr -> next != NULL && i<m; curr = curr->next, i++);
+        Node* temp = curr;
+        prev -> next = curr;
+        prev = curr;
+        delete(temp);
+    }
+}
+
 int main()
 {
     head = NULL;
@@ -43,5 +56,7 @@ int main()
         cin >> data;
         insertAtFirst(data);
     }
+    displayLL();
+    deletek(head, 2, 2);
     displayLL();
 }
