@@ -63,6 +63,16 @@ void postOrderTraversal(node* root)
     }
 }
 
+void postOrderTraversal2(node* root)
+{
+    if(root)
+    {
+        postOrderTraversal(root->left);
+        postOrderTraversal(root->right);
+        cout<<root->data<<" - ";
+    }
+}
+
 int main()
 {
     node* root = NULL;
