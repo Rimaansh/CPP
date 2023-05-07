@@ -21,26 +21,6 @@ int knapsack(int CAP, int n)
    return DP[n][CAP];
 }
 
-// int knapsack(int n, int W)
-// {
-//     if(W<=0) return 0;
-
-//     if(n<=0) return 0;
-
-//     if(dp[n][W] != -1) return dp[n][W];
-
-//     if(wt[n-1]>W)
-//     {
-//         dp[n][W] = knapsack(n-1,  W);
-//     }      
-//     else
-//     {
-//         dp[n][W] = max(knapsack(n-1, W), knapsack(n-1, W - wt[n-1] + val[n-1]));
-//     }        
-
-//     return dp[n][W];
-// }
-
 int main()
 {
     int n, W;

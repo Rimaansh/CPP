@@ -12,8 +12,7 @@ bool isSafe(int v, int clique[], int size)
 {
     for (int i = 0; i < size; i++)
     {
-        if (graph[v][clique[i]] == 0)
-            return false;
+        if (graph[v][clique[i]] == 0) return false;
     }
     return true;
 }
@@ -27,8 +26,7 @@ void findMaxClique(int clique[], int size, int v, int n)
         if (size > maxCliqueSize)
         {
             maxCliqueSize = size;
-            for (int i = 0; i < size; i++)
-                maxClique[i] = clique[i];
+            for (int i = 0; i < size; i++) maxClique[i] = clique[i];
         }
         return;
     }
