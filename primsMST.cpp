@@ -3,11 +3,11 @@ using namespace std;
 
 const int INF = 1e9;
 
-int n, m;   // n = number of vertices, m = number of edges
+int n, m;         // n = number of vertices, m = number of edges
 int adj[10][10];  // adjacency matrix
-int dist[10];    // stores the minimum distance from MST for each vertex
-int parent[10];  // stores the parent of each vertex in the MST
-bool vis[10];    // visited array to keep track of processed vertices
+int dist[10];     // stores the minimum distance from MST for each vertex
+int parent[10];   // stores the parent of each vertex in the MST
+bool vis[10];     // visited array to keep track of processed vertices
 
 int prim()
 {
