@@ -73,3 +73,33 @@ void firstfit(vector<int>b,vector<int>p){
         else cout<<"Not allocated"<<endl;
     }
 } 
+
+int main() {
+    // create vectors of memory blocks and processes
+    vector<int> blocks, processes;
+    
+    blocks.push_back(100);
+    blocks.push_back(500);
+    blocks.push_back(200);
+    blocks.push_back(300);
+    blocks.push_back(600);
+
+    processes.push_back(212);
+    processes.push_back(417);
+    processes.push_back(112);
+    processes.push_back(426);
+
+    // allocate memory using First Fit algorithm
+    cout << "First Fit Algorithm:" << endl;
+    firstfit(blocks, processes);
+
+    // allocate memory using Best Fit algorithm
+    cout << "Best Fit Algorithm:" << endl;
+    bestfit(blocks, processes);
+
+    // allocate memory using Worst Fit algorithm
+    cout << "Worst Fit Algorithm:" << endl;
+    worstfit(blocks, processes);
+
+    return 0;
+}
